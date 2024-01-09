@@ -1,0 +1,15 @@
+# secure htaccess file
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+# Limit bandwidth consumption
+<ifmodule mod_php5.c>
+php_value zlib.output_compression 16386
+</ifmodule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !\.php$ [NC]
+RewriteCond %{REQUEST_URI} [^/]$
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
