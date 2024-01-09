@@ -19,7 +19,7 @@ Generate your full-stack web app in PHP & CodeIgniter, easy to install and fast 
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact me](#Contact Me)
+- [Contact me](#ContactMe)
 
 <!-- Features -->
 ## Features
