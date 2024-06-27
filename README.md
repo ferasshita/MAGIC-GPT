@@ -31,6 +31,13 @@ Generate your full-stack web app in PHP & CodeIgniter, easy to install and fast 
 - Generate Basic CodeIgniter website.
 - Generate Basic CodeIgniter CMS.
 
+#
+
+![Screenshot](https://github.com/ferasshita/Gallery/blob/main/magic/Screenshot%20(25).png?raw=true)
+![Screenshot](https://github.com/ferasshita/Gallery/blob/main/magic/Screenshot%20(26).png?raw=true)
+![Screenshot](https://github.com/ferasshita/Gallery/blob/main/magic/Screenshot%20(27).png?raw=true)
+![Screenshot](https://github.com/ferasshita/Gallery/blob/main/magic/Screenshot%20(28).png?raw=true)
+
 <!-- Installation -->
 ## Installation
 <ol type="1">
