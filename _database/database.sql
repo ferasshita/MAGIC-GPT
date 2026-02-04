@@ -51,6 +51,16 @@ CREATE TABLE `websites` (
 --
 ALTER TABLE `websites`
   ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `websites`
+--
+ALTER TABLE `websites`
+  MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
