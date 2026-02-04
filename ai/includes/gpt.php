@@ -1,7 +1,7 @@
 <?php
 //chat GPT settings
 function prompt($text){
-  $gpt_api_key_field = isset($_POST['api']) ? filter_var(htmlentities($_POST['api']), FILTER_SANITIZE_STRING) : null;
+  $gpt_api_key_field = isset($_POST['api']) ? htmlspecialchars(strip_tags($_POST['api']), ENT_QUOTES, 'UTF-8') : null;
 
   $gpt_api_key_text = 'YOUR_API_KEY';
   
@@ -35,8 +35,18 @@ if($text == 33045){
   ];
 
   $context = stream_context_create($options);
-  $response = file_get_contents($gpt_api_endpoint, false, $context);
-  $answer = json_decode($response)->choices[0]->text;
+  $response = @file_get_contents($gpt_api_endpoint, false, $context);
+  
+  if ($response === false) {
+      return "Error: Unable to connect to GPT API";
+  }
+  
+  $decoded = json_decode($response);
+  if (!$decoded || !isset($decoded->choices[0]->text)) {
+      return "Error: Invalid API response";
+  }
+  
+  $answer = $decoded->choices[0]->text;
 
     return $answer;
 }
